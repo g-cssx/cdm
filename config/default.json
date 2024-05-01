@@ -1,0 +1,44 @@
+{
+  "shop": {
+    "currency": "EUR",
+    "language": "fr",
+    "weightUnit": "kg"
+  },
+  "catalog": {
+    "product": {
+      "image": {
+        "thumbnail": {
+          "width": 100,
+          "height": 100
+        },
+        "listing": {
+          "width": 300,
+          "height": 300
+        },
+        "single": {
+          "width": 500,
+          "height": 500
+        }
+      }
+    },
+    "showOutOfStockProduct": false
+  },
+  "system": {
+    "theme": "cdm"
+  },
+  "pricing": {
+    "rounding": "round",
+    "precision": 2
+  },
+  "themeConfig": {
+    "headTags": {
+      "links": [
+        {
+          "rel": "icon",
+          "href": "/favicon.ico"
+        }
+      ]
+    },
+    "copyRight": "© 2024 CDM. Tous droits réservés."
+  }
+}
