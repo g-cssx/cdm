@@ -1,0 +1,38 @@
+name: Docker Compose Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Recreate .env
+        run: echo '${{ secrets.DOTENV }}' > .env
+
+      - name: Build and run Docker Compose
+        run: docker-compose up -d
+
+      - name: Install Dependencies
+        run: docker-compose exec -T app npm ci
+
+      #      - name: Run Tests
+      #        run: docker-compose exec -T app npm test
+
+      - name: Shutdown Docker Compose
+        run: docker-compose down
+
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@v3.75.1

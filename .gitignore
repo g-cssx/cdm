@@ -1,4 +1,8 @@
-.evershop
+# Evershop
 .log
+.evershop
+
+# Node
 node_modules
+
 .env
