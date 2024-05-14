@@ -18,16 +18,16 @@ Bienvenue dans mon projet de e-commerce. Le projet vise à concrétiser le lance
 - Docker et Docker Compose
 - Au moins 2GB de RAM
 
-### Dépendances optionnelles pour un lancement sans Docker:
+### Dépendances optionnelles pour un lancement sans Docker :
 
 - (Optionnel) Node.js v16 ou supérieur
 - (Optionnel) npm v10 ou supérieur
-- (Optionnel) Une base de donnée PostgreSQL
+- (Optionnel) Une base de données PostgreSQL
 
 ## Installation
 
 1. Clonez le dépôt
-2. Modifier la configuration:
+2. Modifier la configuration :
 
 Copiez le fichier `.env.example` en `.env` et remplissez-le avec vos propres valeurs :
 
@@ -69,6 +69,16 @@ npm run user:changePassword : Change le mot de passe d'un utilisateur.
 ```
 
 Ces script peuvent être utilisé pour gérer les mainteneur/administrateur du site.
+
+## Utilitaires BASH
+
+Pour faciliter certaines taches répétitives, plusieurs scripts BASH ont été créés à la racine :
+
+- [start.sh](start.sh): Ce script est utilisé pour démarrer le projet. Il utilise Docker pour démarrer les services nécessaires, puis affiche les logs.
+- [run.sh](run.sh): Ce script exécute le projet en mode développement en utilisant la commande npm run dev sans passer par Docker (requiert une base de donnée locale).
+- [evershop.sh](run.sh): Ce script exécute des commandes npm dans le conteneur Docker de l'application.
+- [upgrade.sh](upgrade.sh): Ce script est utilisé pour mettre à jour le package @evershop/evershop à la dernière version en utilisant npm.
+- [build.sh](build.sh): Ce script est utilisé pour construire le projet en utilisant Docker. Il construit les images Docker sans utiliser le cache, démarre les services et affiche les logs.
 
 ## Architecture
 
