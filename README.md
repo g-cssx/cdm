@@ -6,6 +6,7 @@
 [![GitHub Actions](https://img.shields.io/badge/Using_GitHub_Actions-2088FF?logo=github-actions&logoColor=white)](https://docs.github.com/en/actions)
 ![Fully Dockerized](https://img.shields.io/badge/Fully_Dockerized-2496ED?logo=docker&logoColor=fff)
 ![Docker Build](https://github.com/g-cssx/cdm/actions/workflows/build.yml/badge.svg)
+![ESLint Status](https://github.com/g-cssx/cdm/actions/workflows/eslint.yml/badge.svg)
 
 </div>
 
